@@ -3,7 +3,7 @@ import axios from 'axios';
 import moment from "moment";
 import crypto from "crypto";
 import querystring from "querystring"
-
+require('dotenv').config();
 let timeNow = Date.now();
 
 const PaymentStatusMap = {

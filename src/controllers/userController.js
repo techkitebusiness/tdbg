@@ -2,8 +2,8 @@ import connection from "../config/connectDB";
 import jwt from 'jsonwebtoken'
 import md5 from "md5";
 import request from 'request';
-
 const axios = require('axios');
+require('dotenv').config();
 let timeNow = Date.now();
 
 const randomNumber = (min, max) => {
