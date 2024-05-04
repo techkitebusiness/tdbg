@@ -2,7 +2,7 @@ import connection from "../config/connectDB";
 // import jwt from 'jsonwebtoken'
 // import md5 from "md5";
 // import e from "express";
-
+require('dotenv').config();
 const homePage = async (req, res) => {
     const [settings] = await connection.query('SELECT `app` FROM admin');
     let app = settings[0].app;
