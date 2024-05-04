@@ -63,6 +63,7 @@ const Level = async(req, res) => {
     await connection.execute("INSERT INTO level SET id = 3, level = 2, f1 = 0.75, f2 = 0.225, f3 = 0.0675, f4 = 0.0203");
     await connection.execute("INSERT INTO level SET id = 2, level = 1, f1 = 0.7, f2 = 0.21, f3 = 0.063, f4 = 0.0189");
     await connection.execute("INSERT INTO level SET id = 1, level = 0, f1 = 0.6, f2 = 0.18, f3 = 0.054, f4 = 0.0162");
+    console.log("Create Success Database Level.");   
 }
 
 const NapRut = async(req, res) => {
@@ -71,12 +72,14 @@ const NapRut = async(req, res) => {
     await connection.execute('DELETE FROM bank_recharge');
     await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `time`) VALUES (NULL, 'MB BANK', 'NGUYEN NHAT LONG', '0800103725300', 'bank', '1655689155500')");
     await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `time`) VALUES (NULL, 'MOMO', 'NGUYEN NHAT LONG', '387633464', 'momo', '1655689155500')");
+    console.log("Create Success Database NapRut.");   
 }
 const Admin = async(req, res) => {
     
     // Reset DataBase Level
     await connection.execute('DELETE FROM admin');
     await connection.execute("INSERT INTO `admin` (`id`, `wingo1`, `wingo3`, `wingo5`, `wingo10`, `k5d`, `k5d3`, `k5d5`, `k5d10`, `win_rate`, `telegram`, `cskh`, `app`) VALUES (NULL, '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '80', 'https://t.me/jososir', 'https://t.me/basusev', '#')");
+    console.log("Create Success Database Admin.");   
 }
 const users = async(req, res) => {
     
