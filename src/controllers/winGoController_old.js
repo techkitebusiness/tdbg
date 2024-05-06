@@ -246,7 +246,7 @@ const betWinGo = async (req, res) => {
         money = ?,
         amount = ?,
         fee = ?,
-        get = ?,
+        \`get\` = ?,
         game = ?,
         bet = ?,
         status = ?,

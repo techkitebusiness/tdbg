@@ -65,15 +65,6 @@ const Level = async(req, res) => {
     await connection.execute("INSERT INTO level SET id = 1, level = 0, f1 = 0.6, f2 = 0.18, f3 = 0.054, f4 = 0.0162");
     console.log("Create Success Database Level.");   
 }
-
-const NapRut = async(req, res) => {
-    
-    // Reset DataBase Level
-    await connection.execute('DELETE FROM bank_recharge');
-    await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `time`) VALUES (NULL, 'MB BANK', 'NGUYEN NHAT LONG', '0800103725300', 'bank', '1655689155500')");
-    await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `time`) VALUES (NULL, 'MOMO', 'NGUYEN NHAT LONG', '387633464', 'momo', '1655689155500')");
-    console.log("Create Success Database NapRut.");   
-}
 const Admin = async(req, res) => {
     
     // Reset DataBase Level
@@ -92,7 +83,7 @@ const users = async(req, res) => {
 const bank_recharge = async(req, res) => {
     
     // Reset DataBase Level
-    await connection.execute('DELETE FROM users');
+    await connection.execute('DELETE FROM bank_recharge');
     await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `qr_code_image`, `time`) VALUES(1, 'sbi', 'aryan', 'yashu12gsusush@ybl', 'bank', 'rrajaparmar6@paytm', '1655689155500')");
     await connection.execute("INSERT INTO `bank_recharge` (`id`, `name_bank`, `name_user`, `stk`, `type`, `qr_code_image`, `time`) VALUES(2, 'pnb', 'basu kumar', 'basu@byl', 'momo', 'basu@paytm', '1655689155500')");
     console.log("Create Success Database bank_recharge.");                                                                                                                                                                                                                                                                                                                                                                                                                     
@@ -103,7 +94,6 @@ CreateWingo();
 Create5D();
 CreateK3();
 Level();
-NapRut();
 Admin();
 users();
 bank_recharge();
